@@ -3,7 +3,7 @@ import cors from "cors";
 import express from "express";
 import morgan from "morgan";
 
-const app = express();
+const app: express.Express = express();
 
 app.use(morgan("tiny"));
 app.use(express.json({ limit: "100mb" }));
@@ -14,8 +14,6 @@ app.use(
     origin: ["http://localhost:3000"],
   }),
 );
-
-const port = process.env.PORT || 3001;
 
 app.get("/", (_, res) => {
   res.send("Hello from Express!");
@@ -28,6 +26,4 @@ app.get("/test", (_, res) => {
   res.json(testJson);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+export default app;
