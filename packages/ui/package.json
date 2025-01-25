@@ -1,17 +1,16 @@
 {
   "name": "@monorepo/ui",
+  "author": "Ives Furtado | @ivesfurtado",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "keywords": [],
   "scripts": {
     "check-types": "tsc --noEmit",
     "add-shadcn-component": "pnpm dlx shadcn@latest add",
-    "build": "tsup",
     "lint": "biome lint ./src",
     "format": "biome format ./src "
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@monorepo/tsconfig": "workspace:*",
@@ -37,6 +36,6 @@
     "./globals.css": "./src/styles/globals.css",
     "./postcss.config": "./postcss.config.mjs",
     "./tailwind.config": "./tailwind.config.ts",
-    "./components/*": "./src/*.tsx"
+    "./components/*": "./src/components/*.tsx"
   }
 }

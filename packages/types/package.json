@@ -1,15 +1,14 @@
 {
   "name": "@monorepo/types",
+  "author": "Ives Furtado | @ivesfurtado",
   "version": "1.0.0",
+  "keywords": [],
+  "license": "ISC",
   "description": "",
   "scripts": {
-    "build": "tsc",
     "lint": "biome lint ./src",
     "check-types": "tsc --noEmit"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@monorepo/tsconfig": "workspace:*"
   },
