@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Shared UI",
+  "display": "Shared Utils",
   "extends": "./base.json",
   "compilerOptions": {
     "paths": {
