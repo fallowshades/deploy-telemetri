@@ -13,12 +13,13 @@
     "@monorepo/types": "workspace:*",
     "@monorepo/ui": "workspace:*",
     "@monorepo/utils": "workspace:*",
-    "next": "15.0.2",
+    "lucide-react": "^0.474.0",
+    "next": "15.1.6",
+    "next-themes": "^0.4.4",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-dom": "19.0.0-rc-02c0e824-20241028"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.2",
     "@monorepo/tsconfig": "workspace:*",
     "@types/node": "^20.17.16",
     "@types/react": "^18.3.18",
