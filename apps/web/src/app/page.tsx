@@ -6,8 +6,8 @@ export default function Home() {
       <header className="text-center mb-12">
         <h1 className="text-3xl font-bold mb-4">Monorepo Showcase</h1>
         <p className="text-muted-foreground">
-          This demo shows the integration between different packages in our monorepo: UI components, API connectivity,
-          and shared types.
+          This demo shows the integration between different packages in our
+          monorepo: UI components, API connectivity, and shared types.
         </p>
       </header>
 

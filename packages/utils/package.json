@@ -8,15 +8,15 @@
   "license": "ISC",
   "scripts": {
     "check-types": "tsc --noEmit",
-    "lint": "biome lint ./src",
-    "format": "biome format ./src "
+    "lint": "eslint ."
   },
   "dependencies": {
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@monorepo/tsconfig": "workspace:*"
+    "@monorepo/tsconfig": "workspace:*",
+    "@monorepo/eslint-config": "workspace:*"
   },
   "exports": {
     ".": "./src",

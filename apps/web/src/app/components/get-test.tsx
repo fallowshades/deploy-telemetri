@@ -1,6 +1,7 @@
 "use client";
 
 import type { GetTestResponse } from "@monorepo/types";
+
 import { Card, CardContent, CardHeader } from "@monorepo/ui/components/card";
 import { cn } from "@monorepo/utils/styles";
 import { Loader2 } from "lucide-react";
@@ -9,7 +10,7 @@ import { useEffect, useState } from "react";
 const GetTest = () => {
   const [test, setTest] = useState<string>("");
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<null | string>(null);
 
   useEffect(() => {
     const fetchTest = async () => {

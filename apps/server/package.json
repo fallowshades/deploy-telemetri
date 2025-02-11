@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "ts-node-dev --transpile-only src/main.ts",
     "build": "tsc",
+    "lint": "eslint .",
     "start": "node dist/main.js"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
   },
   "devDependencies": {
     "@monorepo/tsconfig": "workspace:*",
+    "@monorepo/eslint-config": "workspace:*",
     "@types/cors": "2.8.17",
     "@types/express": "^5.0.0",
     "@types/morgan": "^1.9.9"

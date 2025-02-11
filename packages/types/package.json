@@ -6,11 +6,12 @@
   "license": "ISC",
   "description": "",
   "scripts": {
-    "lint": "biome lint ./src",
+    "lint": "eslint .",
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@monorepo/tsconfig": "workspace:*"
+    "@monorepo/tsconfig": "workspace:*",
+    "@monorepo/eslint-config": "workspace:*"
   },
   "exports": {
     ".": "./src/index.ts"

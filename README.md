@@ -1,6 +1,6 @@
-# Full Stack Monorepo with Turbopack, Biome, Next.js, Express.js, Tailwind CSS, and shadcn
+# Full Stack Monorepo with Turbopack, Eslint, Next.js, Express.js, Tailwind CSS, and shadcn
 
-This repository is a full-stack monorepo starter template that integrates several modern web development tools and libraries, including **Turbopack**, **Biome**, **Next.js**, **Express.js**, **Tailwind CSS**, and **shadcn**. It follows the tutorial from [The Halftime Code](https://www.thehalftimecode.com/building-a-full-stack-monorepo-with-turbopack-biome-next-js-express-js-tailwind-css-and-shadcn/) on how to set up a full-stack monorepo, combining both frontend and backend services in a single codebase.
+This repository is a full-stack monorepo starter template that integrates several modern web development tools and libraries, including **Turbopack**, **Eslint**, **Next.js**, **Express.js**, **Tailwind CSS**, and **shadcn**. It follows the tutorial from [The Halftime Code](https://www.thehalftimecode.com/building-a-full-stack-monorepo-with-turbopack-biome-next-js-express-js-tailwind-css-and-shadcn/) on how to set up a full-stack monorepo, combining both frontend and backend services in a single codebase.
 
 ## Features
 
@@ -10,7 +10,7 @@ This repository is a full-stack monorepo starter template that integrates severa
 - **Turbopack**: A fast incremental bundler and build system, ideal for monorepo setups.
 - **Tailwind CSS**: A utility-first CSS framework for building responsive, modern UI components.
 - **shadcn**: A component library that integrates seamlessly with Tailwind CSS, providing elegant UI components.
-- **Biome**: A fast and versatile tool for linting, formatting, and ensuring code quality across the entire monorepo.
+- **ESLint**: A fast and versatile tool for linting, formatting, and ensuring code quality across the entire monorepo.
 
 ## Project Structure
 
@@ -23,7 +23,7 @@ The monorepo is organized as follows:
 
 /packages
   /ui (shadcn component library with Tailwind CSS)
-  /tsconfig (Shared configuration files such as Biome, Tailwind, and Turbopack)
+  /tsconfig (Shared configuration files such as Eslint, Tailwind, and Turbopack)
   /types (Shared types)
   /ui (Shared UI components and styles)
   /utils (Shared util methods)
@@ -31,7 +31,8 @@ The monorepo is organized as follows:
 
 - **/apps/web**: Contains the Next.js application responsible for the frontend.
 - **/apps/server**: Contains the Express.js application responsible for the backend.
-- **/packages/tsconfig**: Contains shared configurations (e.g., Biome, Tailwind, Turbopack) to enforce consistency across the monorepo.
+- **/packages/tsconfig**: Contains shared configurations (e.g., Eslint, Tailwind, Turbopack) to enforce consistency across the monorepo.
+- **/packages/eslint-config**: Contains shared Eslint configurations for the monorepo. 
 - **/packages/types**: Contains shared types (e.g. responses, api clients, etc).
 - **/packages/ui**: Houses the shared UI components built with shadcn and Tailwind CSS.
 - **/packages/utils**: Contains shared utils methods that will be used in multiple apps or packages.
@@ -41,8 +42,8 @@ The monorepo is organized as follows:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/ivesfurtado/next-express-biome-turborepo.git
-   cd next-express-biome-turborepo
+   git clone https://github.com/ivesfurtado/next-express-turborepo.git
+   cd next-express-turborepo
    ```
 
 2. **Install Dependencies**
@@ -66,7 +67,13 @@ The monorepo is organized as follows:
 
 4. **Build for Production**
 
-   > TODO
+   To build the frontend and backend for production, run:
+
+   ```bash
+   pnpm build
+   ```
+
+   This will create optimized builds for both the frontend and backend services.
 
 ## Tools and Technologies
 
@@ -75,7 +82,7 @@ The monorepo is organized as follows:
 - **Turbopack**: Ensures fast builds and optimal performance for monorepos.
 - **Tailwind CSS**: Simplifies styling with a utility-first approach.
 - **shadcn**: Offers pre-designed components for building clean and modern UIs.
-- **Biome**: Enforces code standards by handling linting and formatting across the project.
+- **ESLint**: Enforces code standards by handling linting and formatting across the project.
 
 ## Deployment
 

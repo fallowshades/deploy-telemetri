@@ -17,12 +17,13 @@
   "dependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.12",
-    "turbo": "^2.3.4"
+    "turbo": "^2.4.1"
   },
   "devDependencies": {
-    "@types/node": "^22.10.10",
-    "@biomejs/biome": "^1.9.4",
-    "postcss": "^8.5.1",
+    "@monorepo/eslint-config": "workspace:*",
+    "@types/node": "^22.13.1",
+    "eslint": "^9.20.0",
+    "prettier": "^3.5.0",
     "typescript": "^5.7.3"
   },
   "packageManager": "pnpm@9.12.1"
