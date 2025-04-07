@@ -58,7 +58,7 @@ export default [
 
       "no-process-env": "off",
       // Error handling
-      "no-unused-vars": "off",
+      "no-unused-vars": "error",
     },
     settings: {
       "import/parsers": {

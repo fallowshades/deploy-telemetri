@@ -17,7 +17,7 @@ const tsConfig = /** @type {import("eslint").Linter.Config[]} */ (
 export default [
   eslint.configs.recommended,
   ...tsConfig,
-  eslintConfigPrettier,
+  eslintConfigPrettier.rules,
   perfectionist.configs["recommended-natural"],
   ...flatCompat.plugins("eslint-plugin-only-warn"),
   {

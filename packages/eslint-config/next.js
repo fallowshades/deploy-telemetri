@@ -9,7 +9,7 @@ import flatCompat from "./compat.js";
 const nextConfig = /** @type {import("eslint").Linter.Config[]} */ (
   fixupConfigRules(
     /** @type {import("@eslint/compat").FixupConfigArray} */
-    (flatCompat.config(next.configs["core-web-vitals"]))
+    (flatCompat.config(next.configs["core-web-vitals"])),
   )
 );
 
