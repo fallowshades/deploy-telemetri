@@ -32,7 +32,7 @@ The monorepo is organized as follows:
 - **/apps/web**: Contains the Next.js application responsible for the frontend.
 - **/apps/server**: Contains the Express.js application responsible for the backend.
 - **/packages/tsconfig**: Contains shared configurations (e.g., Eslint, Tailwind, Turbopack) to enforce consistency across the monorepo.
-- **/packages/eslint-config**: Contains shared Eslint configurations for the monorepo. 
+- **/packages/eslint-config**: Contains shared Eslint configurations for the monorepo.
 - **/packages/types**: Contains shared types (e.g. responses, api clients, etc).
 - **/packages/ui**: Houses the shared UI components built with shadcn and Tailwind CSS.
 - **/packages/utils**: Contains shared utils methods that will be used in multiple apps or packages.
@@ -97,5 +97,13 @@ Contributions are welcome! Please open an issue or submit a pull request if you 
 This project is licensed under the MIT License. Feel free to use and modify it according to your needs.
 
 ---
+
+## Example Applications
+
+This monorepo structure has been successfully used to build:
+
+- **[SnipLLM](https://www.snipllm.com/)** - An AI-powered writing tool that transforms your writing with advanced AI. No expertise needed: just paste any text, choose your goal, and get perfect results instantly.
+
+## Further Reading
 
 For further details on building and setting up this monorepo, check out the original tutorial on [The Halftime Code](https://www.thehalftimecode.com/building-a-full-stack-monorepo-with-turbopack-biome-next-js-express-js-tailwind-css-and-shadcn/).
