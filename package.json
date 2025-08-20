@@ -2,6 +2,7 @@
   "name": "monorepo",
   "private": true,
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "changeset": "changeset",
     "publish:packages": "changeset publish",
     "version:packages": "turbo build && changeset version",
