@@ -1,0 +1,49 @@
+
+services:
+  # mongo:
+  #   image: mongo
+  #   container_name: mongo
+  #   ports:
+  #     - '27017:27017'
+  #   volumes:
+  #     - mongo-data:/data/db
+
+  nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+      args:
+        PROJECT: web
+        NODE_VERSION: 18.18.0
+    command: ["pnpm", "run", "dev"]    # example command for frontend
+    ports:
+      - '3001:3000'
+      - '31:31'
+
+  # server:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #     args:
+  #       PROJECT: server
+  #       NODE_VERSION: 18.18.0
+  #   command: ["npx", "ts-node", "/app/apps/server/dist/main"]   # example command for backend
+  #   ports:
+  #     - '5100:5100'
+  #   environment:
+  #     - MONGO_URI=mongodb://mongo:27017/mydatabase
+  rr:
+    build:
+      context: .
+      dockerfile: Dockerfile.front
+      args:
+        PROJECT: react-router-auth
+        NODE_VERSION: 18.18.0
+    # command: ["npx", "ts-node", "/app/apps/server/dist/main"]   # example command for backend
+    ports:
+      - '5100:5100'
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/mydatabase
+
+# volumes:
+#   mongo-data:
