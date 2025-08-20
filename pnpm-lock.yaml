@@ -162,6 +162,13 @@ importers:
   packages/tsconfig: {}
 
   packages/types:
+    dependencies:
+      '@types/react':
+        specifier: ^19.1.8
+        version: 19.1.8
+      react:
+        specifier: ^19.1.1
+        version: 19.1.1
     devDependencies:
       '@monorepo/eslint-config':
         specifier: workspace:*
@@ -2990,6 +2997,10 @@ packages:
 
   react@19.1.0:
     resolution: {integrity: sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==}
+    engines: {node: '>=0.10.0'}
+
+  react@19.1.1:
+    resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
     engines: {node: '>=0.10.0'}
 
   read-yaml-file@1.1.0:
@@ -6479,6 +6490,8 @@ snapshots:
       '@types/react': 19.1.8
 
   react@19.1.0: {}
+
+  react@19.1.1: {}
 
   read-yaml-file@1.1.0:
     dependencies:

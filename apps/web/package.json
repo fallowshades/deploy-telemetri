@@ -9,6 +9,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+   "workspaces": [
+    "packages/*"
+  ],
   "dependencies": {
     "@monorepo/types": "workspace:*",
     "@monorepo/ui": "workspace:*",

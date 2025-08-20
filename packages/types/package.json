@@ -10,10 +10,14 @@
     "check-types": "tsc --noEmit"
   },
   "devDependencies": {
-    "@monorepo/tsconfig": "workspace:*",
-    "@monorepo/eslint-config": "workspace:*"
+    "@monorepo/eslint-config": "workspace:*",
+    "@monorepo/tsconfig": "workspace:*"
   },
   "exports": {
     ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@types/react": "^19.1.8",
+    "react": "^19.1.1"
   }
 }
