@@ -10,15 +10,27 @@
       ]
     },
     "build": {
-      "dependsOn": [
-        "^build"
+      "dependsOn": ["^build"],
+      "env": [
+        "SOME_ENV_VAR"
       ],
-      "outputs": [
-        "dist/**",
-        ".next/**",
-        "!.next/cache/**"
-      ]
+      "outputs": ["dist/**"]
     },
+    "web#build": {
+      "dependsOn": ["^build"],
+      "env": ["SOME_OTHER_ENV_VAR"],
+      "outputs": [".next/**", "!.next/cache/**"]
+    }
+  },
+  "globalEnv": [
+    "GITHUB_TOKEN"
+  ],
+  "globalDependencies": [
+    "tsconfig.json"
+  ]
+,
+
+
     "lint": {
       "dependsOn": [
         "^topo"

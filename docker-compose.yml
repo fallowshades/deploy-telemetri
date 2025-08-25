@@ -11,14 +11,18 @@ services:
   nextjs:
     build:
       context: .
-      dockerfile: Dockerfile.front
+      dockerfile: Dockerfile.standalone
       args:
         PROJECT: web
         NODE_VERSION: 18.18.0
-    command: ["pnpm", "run", "dev"]    # example command for frontend
+    # command: ["node", "apps/web/server.js"]    # example command for frontend
     ports:
       - '3001:3000'
-      - '31:31'
+     
+
+    volumes:
+      - ./apps/web:/app/apps/web
+      - ./shared:/app/shared
 
   # server:
   #   build:
@@ -32,18 +36,18 @@ services:
   #     - '5100:5100'
   #   environment:
   #     - MONGO_URI=mongodb://mongo:27017/mydatabase
-  rr:
-    build:
-      context: .
-      dockerfile: Dockerfile.front
-      args:
-        PROJECT: react-router-auth
-        NODE_VERSION: 18.18.0
-    # command: ["npx", "ts-node", "/app/apps/server/dist/main"]   # example command for backend
-    ports:
-      - '5100:5100'
-    environment:
-      - MONGO_URI=mongodb://mongo:27017/mydatabase
+  # rr:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile.front
+  #     args:
+  #       PROJECT: react-router-auth
+  #       NODE_VERSION: 18.18.0
+  #   # command: ["npx", "ts-node", "/app/apps/server/dist/main"]   # example command for backend
+  #   ports:
+  #     - '5100:5100'
+  #   environment:
+  #     - MONGO_URI=mongodb://mongo:27017/mydatabase
 
 # volumes:
 #   mongo-data:

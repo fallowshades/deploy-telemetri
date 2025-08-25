@@ -60,5 +60,4 @@ ENV PORT=${PORT}
 ENV NODE_ENV=production
 EXPOSE ${PORT}
 
-CMD node dist/main
-
+CMD ["pnpm", "start"]
